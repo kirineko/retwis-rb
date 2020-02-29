@@ -5,6 +5,11 @@
 # much simpler and does not implement every command explicitly but uses
 # method_missing instead.
 
+
+# 该文件已经过期，不再使用了喵~请换用标准的redis-rb
+# gem install redis
+# attention: this file has been not used.
+
 require 'socket'
 require 'set'
 

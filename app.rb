@@ -1,16 +1,17 @@
 
 require 'rubygems'
-require 'sinatra'  
+require 'sinatra'
+require "sinatra/reloader"
 require 'erb'
-require 'rubyredis'
+require 'redis'
 
-require 'domain'
-require 'login-signup'
+require './domain'
+require './login-signup'
 
 set :sessions, true
 
 def redis
-  $redis ||= RedisClient.new(:timeout => nil)
+  $redis ||= Redis.new(:timeout => nil)
 end
 
 before do
